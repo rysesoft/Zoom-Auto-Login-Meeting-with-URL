@@ -8,12 +8,13 @@ import datetime,time
 from datetime import datetime
 
 dersListesi="Foreign Lang., Pazartesi 17:00,17:50",\
+            "SOFTWARE ENGINEERING,PTS 19:30/20:20/21:10",\	
             "Grafik, SAL 17:00/17:50/18:40,17:00,17:50,18",\
             "Data Mining,""ÇAR 17:00/17:50",\
             "Sistem Kimliklendirme,ÇAR 18:40/19:30", \
             "Pattern Recog,""ÇAR 20:20/21:10.",\
             "Mikro,PER 17:00/17:50/18:40/19:30",\
-            "Scientific,CUM 17:00/17:50",\
+            "MÜHENDİSLİK MATEMATİĞİ,CUM 17:00/17:50/18:40",\
 
 
 print("Listede ki ders sayısı: ",len(dersListesi))
@@ -50,6 +51,15 @@ class autoLogin():
                 print("Join with Audiye Tıklanıyor . Bekleyin")
                 time.sleep(20)
                 press("ENTER"*3)
+             elif bugun==("Tuesday") and (saatNow==19 or saatNow==20 or saatNow==21) and (dakikaNow==10 or dakikaNow==20 or
+                                                                          dakikaNow==30) and (saniyeNow==00 or saniyeNow==1):
+                webbrowser.open('https://erciyes-edu-tr.zoom.us/j/97368729986?pwd=ZXdOWDZrVzhoaWhmcnFsdXJKaUl2dz09')  #SOFTWARE ENG
+                time.sleep(5)
+                press("ENTER")
+                print("Join with Audiye Tıklanıyor . Bekleyin")
+                time.sleep(20)
+                press("ENTER"*3)
+                        
             elif bugun==("Tuesday") and (saatNow==17 or saatNow==18) and (dakikaNow==00 or dakikaNow==50 or
                                                                           dakikaNow==40) and (saniyeNow==00 or saniyeNow==1):
                 webbrowser.open('https://erciyes-edu-tr.zoom.us/j/91529219709?pwd=R0hLTngrakdtbzIwa1IvVEc1dGdIdz09')  #BİLGİSAYAR GRAFİK
@@ -92,8 +102,8 @@ class autoLogin():
                 print("Join with Audiye Tıklanıyor . Bekleyin")
                 time.sleep(20)
                 press("ENTER"*3)
-            elif bugun==("Friday") and saatNow==17 and (dakikaNow==00 or dakikaNow==50) and (saniyeNow==00 or saniyeNow==1) :
-                webbrowser.open('https://erciyes-edu-tr.zoom.us/j/93601453898?pwd=WWMrREROVm5QN3hjdUFDdEdzVmRnUT09') #	SCIENTIFIC PROGRAMMING
+            elif bugun==("Friday") and (saatNow==17 or saatNow==18)  and (dakikaNow==00 or dakikaNow==50 or dakikaNow==40) and (saniyeNow==00 or saniyeNow==1) :
+                webbrowser.open('https://erciyes-edu-tr.zoom.us/j/94603190545?pwd=NTZqSlIrREsrcFE2RDRHKzN3YTVFdz09') # MÜHENDİSLİK MATEMATİĞİ
                 time.sleep(5)
                 press("ENTER")
                 print("Join with Audiye Tıklanıyor . Bekleyin")
